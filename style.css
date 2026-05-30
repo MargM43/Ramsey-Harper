@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+.profile-name {
+  grid-area: name;
+  color: hsl(200 70% 50%);
+}
+
+.profile-img {
+  grid-area: image;
+  border-radius: 8px;
+  grid-area: image;
+
+}
+
+.profile-position {
+  grid-area: position;
+  color: hsl(0 0% 40%);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.social-list {
+  grid-area: social;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: .75rem;
+  justify-items: center;
+}
+
+.profile-info {
+  padding-block-start: 1rem;
+  grid-area: description;
+
+  & > * {
+    padding: 0;
+  }
+  
+  a {
+    color: hsl(200 70% 50%);
+  }
+}
+
+.card {
+  display: grid;
+  gap: 1rem;
+text-align: center;
+justify-items: center;
+  grid-template-areas: 
+  "image"
+  "name"
+  "position"
+    "social"
+    "description";
+  background: hsl(0 0% 97%);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px hsl(0 0% 10% / .2);
+  margin: 0 auto;
+    max-width: 600px;
+    width: 100%; 
+
+@media (width > 600px) {
+  text-align: left;
+  justify-items: start;
+  grid-template-areas:
+  "image name"
+  "image position"
+  "social description"
+}
+
+@media (width > 800px) {
+  grid-template-columns: auto 1fr 1fr;
+  grid-template-areas:
+  "image name social"
+  "image position position"
+  "description description description"
+}
+.social-list {
+  justify-self: end;
+}
+}
+
+
+
+
+
+
+
+
+ 
+
